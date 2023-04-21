@@ -1,0 +1,11 @@
+{
+  "name": "Upcoming concerts in San Jose",
+  "version": "1.0.1",
+  "description": "This ia an extension to look up local concerts",
+  "manifest_version": 3,
+  "author": "Arthur and David",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Upcoming San Jose Concerts"
+  }
+}
