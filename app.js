@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const innerUl = document.createElement("ul");
           // create another line with a li and anchor tag with the src link usng inner html
           const innerLi = document.createElement("li");
-          innerLi.innerHTML = `<a href=${data[key][i].location.sameAs}>Venue</a>`;
+          innerLi.innerHTML = `<a href=${data[key][i].location.sameAs} target="_blank">Venue</a>`;
           innerUl.appendChild(innerLi);
 
           // append the link to the ul
@@ -70,12 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
               description = description.replace(oldDate, date);
               console.log(description);
               li.innerText = `${description}`;
-      
 
               ul.appendChild(li);
               break;
             }
-       
           }
           li.appendChild(innerUl);
         }

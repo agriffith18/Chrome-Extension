@@ -1,7 +1,34 @@
-/* body {
-  min-width: 100%;
-} */
-
 body {
-    white-space: nowrap;
+  height: 50%;
+  white-space: nowrap;
+  background: black;
+  font-size: 14px;
+  background-image: url("img/edited.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(162, 215, 216);
+}
+
+ul,
+li {
+  color: white;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  color: rgb(162, 215, 216);
+}
+
+a:hover {
+  color: red;
 }
