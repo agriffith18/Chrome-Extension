@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       options
     )
       .then((response) => response.json())
-      //    .then((response) => console.log(response))
+      // .then((response) => console.log(response))
       .then((response) => helperFunc(response))
       .catch((err) => console.error(err));
   };
@@ -46,6 +46,16 @@ document.addEventListener("DOMContentLoaded", () => {
         // console.log(data[key]);
         for (let i = 0; i < data[key].length; i++) {
           //   console.log(data[key][i].description);
+
+          // create another ul
+          const innerUl = document.createElement("ul");
+          // create another line with a li and anchor tag with the src link usng inner html
+          const innerLi = document.createElement("li");
+          innerLi.innerHTML = `<a href=${data[key][i].location.sameAs}>Venue</a>`;
+          innerUl.appendChild(innerLi);
+
+          // append the link to the ul
+          // then append the ul to the description const li
 
           const li = document.createElement("li");
           let description = data[key][i].description;
@@ -60,14 +70,16 @@ document.addEventListener("DOMContentLoaded", () => {
               description = description.replace(oldDate, date);
               console.log(description);
               li.innerText = `${description}`;
+      
+
               ul.appendChild(li);
               break;
             }
+       
           }
+          li.appendChild(innerUl);
         }
       }
     }
   };
-
-  concertFetch();
 });
